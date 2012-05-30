@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/view_shape_line_pref"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/logo"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="50"
+            android:gravity="fill_vertical"
+            android:textColor="#000"
+            android:textSize="10dip" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/denom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="50"
+            android:background="@drawable/banner_app" >
+        </ImageView>
+    </LinearLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bar" >
+
+        <TextView
+            android:id="@+id/preference"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:text="@string/pref"
+            android:textColor="#FFF"
+            android:textSize="19dp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#E4E4E4"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingTop="5dp" >
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.1"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="3dp"
+                android:listSelector="@android:color/transparent" />
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent" >
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/add" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

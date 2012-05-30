@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_gradient_top_bar"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/mv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/mv"
+            android:textColor="#000"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/dm"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/mv"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/dm"
+            android:textColor="#000"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/pm"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/dm"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/pm"
+            android:textColor="#000"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <WebView
+            android:id="@+id/datail_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </WebView>
+    </LinearLayout>
+
+</LinearLayout>

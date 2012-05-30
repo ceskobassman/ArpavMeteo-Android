@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_gradient_top_bar"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/radar_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="left"
+            android:textColor="#FFF"
+            android:textSize="19dp"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/radar_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ImageView>
+
+</LinearLayout>

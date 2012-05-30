@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/view_shape_item_rounded" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="fill_vertical"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="15dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/addicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/ic_menu_add"
+            android:gravity="fill_vertical" />
+    </RelativeLayout>
+
+</LinearLayout>

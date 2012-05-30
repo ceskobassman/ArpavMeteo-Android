@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ARPAV Meteo</string>
+    <string name="update">Aggiorna</string>
+    <string name="config">Preferiti</string>
+    <string name="home">Pagina principale</string>
+    <string name="add">Aggiungi località</string>
+    <string name="pref">Preferiti</string>
+    <string name="bull">Bollettini</string>
+    <string name="meteo">Meteogrammi</string>
+    <string name="radar">Radar</string>
+    <string name="mv">Meteo Veneto</string>
+    <string name="dm">Meteo Dolomiti</string>
+    <string name="pm">Meteo Pianura</string>
+    <string name="choice">Scelta provincia e comune</string>
+    <string name="warning">Nessun preferito selezionato</string>
+    <string name="advice">Usa il pulsante ""Preferiti" per aggiungere località alla lista preferiti. In ogni caso è possibile visualizzare i bollettini</string>
+    <string name="denom">Agenzia Regionale per la Prevenzione e Protezione Ambientale del Veneto"</string>
+
+</resources>

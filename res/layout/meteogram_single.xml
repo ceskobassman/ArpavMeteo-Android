@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/meteo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="fill_vertical"
+        android:text=""
+        android:textColor="#FFF"
+        android:textSize="15dip" >
+    </TextView>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_shape_square"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:id="@+id/meteo_cielo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/meteo_cielo_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dip" >
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:id="@+id/meteo_tquota"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/meteo_tquota_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dip" >
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:id="@+id/meteo_tvalli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/meteo_tvalli_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dip" >
+                </ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/meteo_precipitazioni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text="xcxc"
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/meteo_precipitazioni_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dip" >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/meteo_probabilita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/meteo_probabilita_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dip" >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/meteo_neve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/meteo_neve_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="5dip" >
+                </TextView>
+            </RelativeLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/meteo_attendibilita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/meteo_attendibilita_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="fill_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dip" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
