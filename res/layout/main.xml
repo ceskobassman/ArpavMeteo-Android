@@ -6,10 +6,10 @@
   android:layout_height="fill_parent" >
   
    <ImageView
-        android:id="@+id/bg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/splash" />
-      
+       android:id="@+id/bg"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:contentDescription="@string/description_image_home"
+       android:src="@drawable/splash" />
     
 </LinearLayout>

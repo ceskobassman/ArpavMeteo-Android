@@ -8,7 +8,7 @@
     <string name="add">Aggiungi località</string>
     <string name="pref">Preferiti</string>
     <string name="bull">Bollettini</string>
-    <string name="meteo">Meteogrammi</string>
+    <string name="meteo">Meteo</string>
     <string name="radar">Radar</string>
     <string name="mv">Meteo Veneto</string>
     <string name="dm">Meteo Dolomiti</string>
@@ -17,5 +17,6 @@
     <string name="warning">Nessun preferito selezionato</string>
     <string name="advice">Usa il pulsante ""Preferiti" per aggiungere località alla lista preferiti. In ogni caso è possibile visualizzare i bollettini</string>
     <string name="denom">Agenzia Regionale per la Prevenzione e Protezione Ambientale del Veneto"</string>
+    <string name="description_image_home">Arpav Immage</string>
 
 </resources>
