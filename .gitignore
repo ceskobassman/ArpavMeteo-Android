@@ -2,7 +2,8 @@
 .classpath
 .project
 
-.*~
+*.*~
 
+libs/
 bin/
 gen/
