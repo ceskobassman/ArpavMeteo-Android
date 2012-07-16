@@ -42,10 +42,12 @@ public class BulletinFragmentAdapter extends FragmentPagerAdapter {
 	protected List<Forecast> forecasts;
 	private Activity activity;
 	private int mCount;
+	private String currentBulletinid;
 
 	public BulletinFragmentAdapter(FragmentManager fm, Activity activity, String bulletinid) {
 		super(fm);
 		this.activity = activity;
+		currentBulletinid = bulletinid;
 		forecasts = Global.istance().getForecastByBulletinID(bulletinid);
 		
 		if(null == forecasts)
@@ -56,8 +58,9 @@ public class BulletinFragmentAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
+		Log.d("YourTag", "getItem");
 		Forecast f = forecasts.get(position);
-		return ForecastFragment.newInstance(activity,f);
+		return ForecastFragment.newInstance(activity,f, currentBulletinid);
 	}
 
 	@Override

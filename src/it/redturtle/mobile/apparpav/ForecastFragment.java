@@ -26,6 +26,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +41,12 @@ import android.widget.Button;
 public final class ForecastFragment extends Fragment {
 
 	private Activity activity;
+	public static String currentBulletinid;
 	private Forecast forecast;
-
-	public static ForecastFragment newInstance(Activity activity, Forecast f) {
+	
+	
+	public static ForecastFragment newInstance(Activity activity, Forecast f, String bulletinid) {
+		currentBulletinid=bulletinid;
 		ForecastFragment fragment = new ForecastFragment();
 		fragment.forecast = f;
 		fragment.activity = activity;
@@ -86,6 +90,25 @@ public final class ForecastFragment extends Fragment {
 				startActivity(newintent);
 			}
 		});
+		
+		
+		// disable the button corresponding to the current section, for better user navigation 
+		if( currentBulletinid.equals("MV") ){
+			mv.setPressed(true);
+			mv.setEnabled(false);
+		}
+		else{
+			if( currentBulletinid.equals("DM") ){
+				dm.setPressed(true);
+				dm.setEnabled(false);
+			}
+			else
+				if( currentBulletinid.equals("MP") ){
+					pm.setPressed(true);
+					pm.setEnabled(false);
+				}
+		}
+		// #####################################
 
 		WebView webview = (WebView) view.findViewById(R.id.datail_content);
 		webview.setWebChromeClient(new WebChromeClient() {});
