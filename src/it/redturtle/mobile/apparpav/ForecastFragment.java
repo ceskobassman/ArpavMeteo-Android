@@ -91,20 +91,19 @@ public final class ForecastFragment extends Fragment {
 			}
 		});
 		
-		
+		Log.d("XX", currentBulletinid );
 		// disable the button corresponding to the current section, for better user navigation 
 		if( currentBulletinid.equals("MV") ){
-			mv.setPressed(true);
+			Log.d("XX", "_MV" );
+			//mv.setPressed(true);
 			mv.setEnabled(false);
 		}
 		else{
 			if( currentBulletinid.equals("DM") ){
-				dm.setPressed(true);
 				dm.setEnabled(false);
 			}
 			else
 				if( currentBulletinid.equals("MP") ){
-					pm.setPressed(true);
 					pm.setEnabled(false);
 				}
 		}
