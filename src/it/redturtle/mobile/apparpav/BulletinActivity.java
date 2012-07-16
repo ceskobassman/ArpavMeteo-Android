@@ -74,8 +74,11 @@ public class BulletinActivity extends IndicatorActivity {
 
 		Intent intent = getIntent();
 		String bulletinid = intent.getStringExtra("bulletinid");
-		if(null == bulletinid || bulletinid.equals(""))
+		if(null == bulletinid || bulletinid.equals("")){
 			bulletinid= "MV";
+//			Button mv = (Button) findViewById(R.id.dm);
+//			mv.setClickable(false);
+		}
 
 		this.updateDisplay(bulletinid);
 	}

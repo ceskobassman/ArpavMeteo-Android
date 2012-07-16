@@ -46,8 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:gravity="left"
+            
+            android:gravity="center"
             android:text="@string/warning"
             android:textColor="#FFF"
             android:textSize="19dp"
@@ -62,13 +62,25 @@
 
         <TextView
             android:id="@+id/advice"
-            android:layout_width="fill_parent"
+            android:layout_width="300dp"
+            
             android:layout_height="fill_parent"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/advice"
             android:textColor="#413839"
             android:textSize="14dp" />
+
+        <Button
+            android:id="@+id/button_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/config" />
+
     </LinearLayout>
 
     <android.support.v4.view.ViewPager

@@ -18,8 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:gravity="left"
+            android:gravity="center"
             android:textColor="#FFF"
             android:textSize="19dp"
             android:typeface="sans" />

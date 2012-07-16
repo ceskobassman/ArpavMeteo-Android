@@ -75,14 +75,28 @@ public class MeteogramsActivity extends IndicatorActivity {
 	}
 
 	public void updateDisplay() {
-		if(Util.isEmptySavedMunicipality(this))
+		if(Util.isEmptySavedMunicipality(this)){
 			setContentView(R.layout.simple_circles_no_pref);
+			// listener of Button_favorites
+			final Button favorites = (Button) this.findViewById(R.id.button_favorites);
+			favorites.setOnClickListener(new View.OnClickListener() {
+				public void onClick(View v) {
+					Intent newintent = new Intent(MeteogramsActivity.this, ConfActivity.class);
+					newintent.putExtra("reload", true);
+					startActivity(newintent);
+				}
+			});
+		}
 		
 		// METEO active
 		final Button meteo = (Button) this.findViewById(R.id.meteograms);
-		if(!Util.isEmptySavedMunicipality(this))
-			meteo.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.bg_footer_reversed));
-
+		// ###########
+		// originally: disattiva bottone solo se non ci sono preferiti salvati
+		//if(!Util.isEmptySavedMunicipality(this))
+			//meteo.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.bg_footer_reversed));
+		// ############
+		meteo.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.bg_footer_reversed));
+		
 		// START BULLETINS
 		final Button bulletins = (Button) this.findViewById(R.id.bulletins);
 		bulletins.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.bg_footer));

@@ -32,6 +32,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
 
 /**
  * @author Nicola Senno
@@ -46,6 +47,7 @@ public class BulletinFragmentAdapter extends FragmentPagerAdapter {
 		super(fm);
 		this.activity = activity;
 		forecasts = Global.istance().getForecastByBulletinID(bulletinid);
+		
 		if(null == forecasts)
 			forecasts = reload(activity, bulletinid);
 
