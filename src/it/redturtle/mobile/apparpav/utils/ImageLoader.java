@@ -56,7 +56,7 @@ public class ImageLoader {
 		fileCache=new FileCache(context);
 	}
 
-	final int stub_id= R.drawable.stub;
+	int stub_id;
 	public void DisplayImage(String url, Activity activity, ImageView imageView){
 		imageViews.put(imageView, url);
 		Bitmap bitmap=memoryCache.get(url);
@@ -64,6 +64,11 @@ public class ImageLoader {
 			imageView.setImageBitmap(bitmap);
 		else {
 			queuePhoto(url, activity, imageView);
+			if(Util.isNetworkAvailable(activity) == true)
+				stub_id= R.drawable.stub;
+			else
+				stub_id= R.drawable.no_network;
+			
 			imageView.setImageResource(stub_id);
 		}    
 	}
