@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="buttonStyle"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -10,17 +12,39 @@
         android:layout_height="44dp"
         android:background="@drawable/bar" >
 
+        <Button
+            android:id="@+id/button_swype_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/arrow_left"
+            android:text="" />
+
         <TextView
             android:id="@+id/municipality"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_swype_right"
+            android:layout_toRightOf="@+id/button_swype_left"
             android:gravity="center"
             android:text=""
             android:textColor="#FFF"
             android:textSize="19dp"
             android:typeface="sans" />
+
+        <Button
+            android:id="@+id/button_swype_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/arrow_right"
+            android:text="" />
+
     </RelativeLayout>
 
     <LinearLayout

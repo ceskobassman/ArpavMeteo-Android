@@ -30,6 +30,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -39,7 +41,7 @@ import com.viewpagerindicator.CirclePageIndicator;
 /**
  * @author Nicola Senno
  */
-public class MeteogramsActivity extends IndicatorActivity {
+public class MeteogramsActivity extends IndicatorActivity implements MeteogramFragment.OnPageListener {
 	private ProgressDialog pd = null;
 	private String DEFAULT_BULLETIN = "MV";
 
@@ -50,7 +52,7 @@ public class MeteogramsActivity extends IndicatorActivity {
 		setContentView(R.layout.simple_circles);
 
 		if(Util.isFirstRun(this)){
-			this.pd = ProgressDialog.show(this, "Working..", "Downloading Data...", true, false);
+			this.pd = ProgressDialog.show(this, "Working..", "Preparing data...\nNetwork connection is recommended", true, false);
 			new InitialTask().execute();
 
 		} else {
@@ -75,7 +77,9 @@ public class MeteogramsActivity extends IndicatorActivity {
 	}
 
 	public void updateDisplay() {
+		// If there is no municipality saved as a favorite
 		if(Util.isEmptySavedMunicipality(this)){
+			// change the layout from simple_circle (setted at onCreate method)
 			setContentView(R.layout.simple_circles_no_pref);
 			// listener of Button_favorites
 			final Button favorites = (Button) this.findViewById(R.id.button_favorites);
@@ -127,9 +131,35 @@ public class MeteogramsActivity extends IndicatorActivity {
 		mPager.setAdapter(mAdapter);
 		mIndicator = (CirclePageIndicator) findViewById(R.id.indicator);
 		mIndicator.setViewPager(mPager);
+		
+
 	}
 
-
+	// #################################
+	@Override
+	public void swypeLeft() {
+		
+		mPager.setCurrentItem( mPager.getCurrentItem()-1 );
+	}
+	
+	public void swypeRight() {
+		mPager.setCurrentItem( mPager.getCurrentItem()+1 );
+	}
+	
+	// to hide the button_swype_left and button_swype_right if there are no swype left or right
+	public int controlSwype(Context context){
+		int numTotMunicipality = Util.getSavedMunicipalities(context).size();
+		
+		if(  numTotMunicipality == 1 )
+			// hides both buttons
+			return 0;
+		
+		// don't hide buttons
+		return 2;
+	}
+	
+	// #################################
+	
 	/**
 	 * This task will be executed only the first time the application runs. Retrieves info from 
 	 * internet or from file-system if not connection available and load data into Globals singleton. 
