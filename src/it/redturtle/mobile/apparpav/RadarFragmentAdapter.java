@@ -44,7 +44,7 @@ public class RadarFragmentAdapter extends FragmentPagerAdapter {
 		super(fm);
 		radars = Global.istance().getRadars();
 		context = c;
-		// try to reload if municipality length is 0
+		// try to reload if radar length is 0
 		if(radars.size() < 1)
 			radars  = reload(context);
 

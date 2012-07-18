@@ -112,7 +112,7 @@ public final class MeteogramFragment extends Fragment {
 		default:
 			break;
 		}
-
+		//#######################
 		
 		ListAdapter adapter = new MeteogramAdapter(context, meteogram.getListOfSlot());
 		list.setAdapter(adapter);

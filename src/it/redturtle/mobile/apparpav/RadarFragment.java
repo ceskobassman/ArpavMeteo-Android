@@ -21,12 +21,16 @@
 
 package it.redturtle.mobile.apparpav;
 
+import it.redturtle.mobile.apparpav.MeteogramFragment.OnPageListener;
 import it.redturtle.mobile.apparpav.utils.ImageLoader;
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -50,6 +54,25 @@ public final class RadarFragment extends Fragment {
 		TextView location = (TextView) view.findViewById(R.id.radar_location);
 		location.setText(radarItem.getElementByName("title"));
 		
+		//###########################
+		// set listener for the button_swype_left and button_swype_right
+	    Button bsl = (Button) view.findViewById(R.id.button_swype_left);
+	    bsl.setOnClickListener(new View.OnClickListener() {
+	       @Override
+	       public void onClick(View v) {
+	          pageListener.swypeLeft();
+	       }
+	    });
+
+		Button bsr = (Button) view.findViewById(R.id.button_swype_right);
+	    bsr.setOnClickListener(new View.OnClickListener() {
+		       @Override
+		       public void onClick(View v) {
+		    	   pageListener.swypeRight();
+		       }
+		});
+		// ############################
+		
 		ImageLoader imageLoader = new ImageLoader(this.getActivity());
 		ImageView image = (ImageView) view.findViewById(R.id.radar_image);
 		imageLoader.DisplayImage(radarItem.getElementByName("img"), this.getActivity(), image);
@@ -60,5 +83,36 @@ public final class RadarFragment extends Fragment {
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 	}
+	
+	
+	
+	//################################################
+	// activity listener interface for the button_swype_left and button_swype_right,
+	// the interface is implemented in RadarActivity.java so when the button is pressed
+	// is automatically called the method in RadarActivity.java
+	private OnPageListener pageListener;
+	public interface OnPageListener {
+	    public void swypeLeft();
+	    public void swypeRight();
+	}
+	
+	
+	// onAttach : set activity listener
+	@Override
+	public void onAttach(Activity activity) {
+	   super.onAttach(activity);
+	   // if implemented by activity, set listener
+	   if(activity instanceof OnPageListener) {
+	      pageListener = (OnPageListener) activity;
+	   }
+	   // else create local listener (code never executed in this example)
+	   else pageListener = new OnPageListener() {
+	      @Override
+	      public void swypeLeft(){}
+	      public void swypeRight(){};
+	   };
+	}
+	//#######################################################
+	
 	
 }

@@ -136,6 +136,7 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 	}
 
 	// #################################
+	// implementation of interface OnPageListener declared in MeteogramsFragment.java
 	@Override
 	public void swypeLeft() {
 		

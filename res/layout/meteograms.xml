@@ -30,10 +30,10 @@
             android:layout_toLeftOf="@+id/button_swype_right"
             android:layout_toRightOf="@+id/button_swype_left"
             android:gravity="center"
-            android:text=""
             android:textColor="#FFF"
             android:textSize="19dp"
-            android:typeface="sans" />
+            android:typeface="sans" 
+            android:text="" />
 
         <Button
             android:id="@+id/button_swype_right"

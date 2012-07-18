@@ -91,11 +91,9 @@ public final class ForecastFragment extends Fragment {
 			}
 		});
 		
-		Log.d("XX", currentBulletinid );
+
 		// disable the button corresponding to the current section, for better user navigation 
 		if( currentBulletinid.equals("MV") ){
-			Log.d("XX", "_MV" );
-			//mv.setPressed(true);
 			mv.setEnabled(false);
 		}
 		else{

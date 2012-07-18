@@ -11,17 +11,39 @@
         android:layout_height="44dp"
         android:background="@drawable/bg_gradient_top_bar"
         android:gravity="center" >
-
+        
+        <Button
+            android:id="@+id/button_swype_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/arrow_left"
+            android:text="" />
+        
         <TextView
             android:id="@+id/radar_location"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_swype_right"
+            android:layout_toRightOf="@+id/button_swype_left"
             android:gravity="center"
             android:textColor="#FFF"
             android:textSize="19dp"
             android:typeface="sans" />
+        
+        <Button
+            android:id="@+id/button_swype_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/arrow_right"
+            android:text="" />
+        
     </RelativeLayout>
 
     <ImageView
