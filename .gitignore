@@ -1,11 +1,11 @@
 # Eclipse file project
-.classpath
-.project
+#.classpath
+#.project
 
 *.*~
 
 TO_DO.*
 
-libs/
+#libs/
 bin/
-gen/
+#gen/
