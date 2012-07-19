@@ -58,7 +58,6 @@ public class BulletinFragmentAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public Fragment getItem(int position) {
-		Log.d("YourTag", "getItem");
 		Forecast f = forecasts.get(position);
 		return ForecastFragment.newInstance(activity,f, currentBulletinid);
 	}

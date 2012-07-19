@@ -45,7 +45,6 @@ public class Radar implements Serializable {
 	// if String index=="title" return the name of radar
 	// if String index=="img" return the url of image
 	public String getElementByName(String index){
-		Log.d( "cosa", radar_row.get(index) );  /// !!!!!!!!!!!!!!!!!!!
 		return radar_row.get(index);
 	}
 }
