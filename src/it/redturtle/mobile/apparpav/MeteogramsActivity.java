@@ -135,31 +135,7 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 
 	}
 
-	// #################################
-	// implementation of interface OnPageListener declared in MeteogramsFragment.java
-	@Override
-	public void swypeLeft() {
-		
-		mPager.setCurrentItem( mPager.getCurrentItem()-1 );
-	}
-	
-	public void swypeRight() {
-		mPager.setCurrentItem( mPager.getCurrentItem()+1 );
-	}
-	
-	// to hide the button_swype_left and button_swype_right if there are no swype left or right
-	public int controlSwype(Context context){
-		int numTotMunicipality = Util.getSavedMunicipalities(context).size();
-		
-		if(  numTotMunicipality == 1 )
-			// hides both buttons
-			return 0;
-		
-		// don't hide buttons
-		return 2;
-	}
-	
-	// #################################
+
 	
 	/**
 	 * This task will be executed only the first time the application runs. Retrieves info from 
@@ -212,5 +188,33 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 		}
 
 		protected void onPostExecute(Object result) {}
-	} 
+	}
+	
+	
+	// #################################
+	// implementation of interface OnPageListener declared in MeteogramsFragment.java
+	@Override
+	public void swypeLeft() {
+		
+		mPager.setCurrentItem( mPager.getCurrentItem()-1 );
+	}
+	
+	public void swypeRight() {
+		mPager.setCurrentItem( mPager.getCurrentItem()+1 );
+	}
+	
+	// to hide the button_swype_left and button_swype_right if there are no swype left or right
+	public int controlSwype(Context context){
+		int numTotMunicipality = Util.getSavedMunicipalities(context).size();
+		
+		if(  numTotMunicipality == 1 )
+			// hides both buttons
+			return 0;
+		
+		// don't hide buttons
+		return 2;
+	}
+	
+	// #################################
+	
 }

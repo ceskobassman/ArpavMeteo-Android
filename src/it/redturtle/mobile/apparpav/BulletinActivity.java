@@ -21,6 +21,8 @@
 
 package it.redturtle.mobile.apparpav;
 
+import it.redturtle.mobile.apparpav.utils.Util;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -36,7 +38,7 @@ import com.viewpagerindicator.CirclePageIndicator;
  * @author Nicola Senno
  */
 
-public class BulletinActivity extends IndicatorActivity {
+public class BulletinActivity extends IndicatorActivity implements ForecastFragment.OnPageListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -100,4 +102,19 @@ public class BulletinActivity extends IndicatorActivity {
 	    }
 	    return super.onKeyDown(keyCode, event);
 	}
+	
+	// #################################
+	// implementation of interface OnPageListener declared in ForecastFragment.java
+	@Override
+	public void swypeLeft() {
+		
+		mPager.setCurrentItem( mPager.getCurrentItem()-1 );
+	}
+	
+	public void swypeRight() {
+		mPager.setCurrentItem( mPager.getCurrentItem()+1 );
+	}
+	
+	// #################################
+	
 }

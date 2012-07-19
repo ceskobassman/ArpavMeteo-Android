@@ -18,5 +18,6 @@
     <string name="advice">Usa il pulsante Preferiti per aggiungere località alla lista preferiti. In ogni caso è possibile visualizzare le sezioni Bollettini e Radar</string>
     <string name="denom">Agenzia Regionale per la Prevenzione e Protezione Ambientale del Veneto"</string>
     <string name="description_image_home">Arpav Immage</string>
+    <string name="not_connected_toast">Connect to network to update image!</string>
 
 </resources>

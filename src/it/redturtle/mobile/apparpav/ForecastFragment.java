@@ -26,7 +26,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,9 +42,11 @@ public final class ForecastFragment extends Fragment {
 	private Activity activity;
 	public static String currentBulletinid;
 	private Forecast forecast;
+
 	
-	
-	public static ForecastFragment newInstance(Activity activity, Forecast f, String bulletinid) {
+	public static ForecastFragment newInstance(Activity activity, Forecast f, String bulletinid ) {
+
+		
 		currentBulletinid=bulletinid;
 		ForecastFragment fragment = new ForecastFragment();
 		fragment.forecast = f;
@@ -106,6 +107,26 @@ public final class ForecastFragment extends Fragment {
 				}
 		}
 		// #####################################
+		
+		//###########################
+		// set listener for the button_swype_left and button_swype_right
+	    Button bsl = (Button) view.findViewById(R.id.button_swype_left);
+	    bsl.setOnClickListener(new View.OnClickListener() {
+	       @Override
+	       public void onClick(View v) {
+	          pageListener.swypeLeft();
+	       }
+	    });
+
+		Button bsr = (Button) view.findViewById(R.id.button_swype_right);
+	    bsr.setOnClickListener(new View.OnClickListener() {
+		       @Override
+		       public void onClick(View v) {
+		    	   pageListener.swypeRight();
+		       }
+		    });
+	    
+		//#######################
 
 		WebView webview = (WebView) view.findViewById(R.id.datail_content);
 		webview.setWebChromeClient(new WebChromeClient() {});
@@ -156,4 +177,34 @@ public final class ForecastFragment extends Fragment {
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 	}
+	
+	
+	//################################################
+	// activity listener interface for the button_swype_left and button_swype_right,
+	// the interface is implemented in MeteogramsActivity.java so when the button is pressed
+	// is automatically called the method in MeteogramsActivity.java
+	private OnPageListener pageListener;
+	public interface OnPageListener {
+	    public void swypeLeft();
+	    public void swypeRight();
+	}
+	
+	
+	// onAttach : set activity listener
+	@Override
+	public void onAttach(Activity activity) {
+	   super.onAttach(activity);
+	   // if implemented by activity, set listener
+	   if(activity instanceof OnPageListener) {
+	      pageListener = (OnPageListener) activity;
+	   }
+	   // else create local listener (code never executed in this example)
+	   else pageListener = new OnPageListener() {
+	      @Override
+	      public void swypeLeft() {}
+	      public void swypeRight(){};
+	   };
+	}
+	//#######################################################
+	
 }

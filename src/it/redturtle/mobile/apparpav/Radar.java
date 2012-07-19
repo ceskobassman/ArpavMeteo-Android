@@ -25,18 +25,27 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.util.Log;
+
 /**
  * @author Nicola Senno
  */
 public class Radar implements Serializable {
 	private static final long serialVersionUID = 1L;
+
+	// radar_row contains radar information ( Map<key, value> ) : 
+	// key = "title" contains the name of radar (the location of radar)
+	// key = "img" contains the url of image
 	private Map<String, String> radar_row = new HashMap<String, String>();
 
 	public Radar(Map<String, String> row){
 		this.radar_row = row;
 	}
 
+	// if String index=="title" return the name of radar
+	// if String index=="img" return the url of image
 	public String getElementByName(String index){
+		Log.d( "cosa", radar_row.get(index) );  /// !!!!!!!!!!!!!!!!!!!
 		return radar_row.get(index);
 	}
 }
