@@ -21,12 +21,15 @@
 
 package it.redturtle.mobile.apparpav;
 
-import it.redturtle.mobile.apparpav.MeteogramFragment.OnPageListener;
 import it.redturtle.mobile.apparpav.utils.ImageLoader;
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +42,8 @@ import android.widget.TextView;
  */
 public final class RadarFragment extends Fragment {
 	private Radar radarItem;
-
+	
+	
 	public static RadarFragment newInstance(Radar r) {
 		RadarFragment radar = new RadarFragment();
 		radar.radarItem = r;
@@ -76,6 +80,26 @@ public final class RadarFragment extends Fragment {
 		ImageLoader imageLoader = new ImageLoader(this.getActivity());
 		ImageView image = (ImageView) view.findViewById(R.id.radar_image);
 		imageLoader.DisplayImage(radarItem.getElementByName("img"), this.getActivity(), image);
+
+	    image.setOnClickListener(new View.OnClickListener() {
+
+      
+	          
+	          @Override
+	          public void onClick(View v) {
+	        	Log.d("img", "click");
+                // in onCreate or any event where your want the user to
+                // select a file
+                Intent intent = new Intent( getActivity(), FullScreenActivity.class );
+                intent.putExtra("title", radarItem.getElementByName("title") );
+                intent.putExtra("url", radarItem.getElementByName("img") );
+                startActivity(intent);
+	          }
+	          
+	          
+
+	        });
+		
 		return view;
 	}
 
@@ -83,7 +107,6 @@ public final class RadarFragment extends Fragment {
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 	}
-	
 	
 	
 	//################################################

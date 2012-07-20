@@ -21,8 +21,7 @@
 
 package it.redturtle.mobile.apparpav;
 
-import it.redturtle.mobile.apparpav.utils.Util;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
