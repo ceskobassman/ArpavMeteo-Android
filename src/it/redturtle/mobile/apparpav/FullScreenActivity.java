@@ -11,6 +11,7 @@ import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.FloatMath;
 import android.util.Log;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,6 +22,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class FullScreenActivity extends Activity implements OnTouchListener {
+	
+	// indicates from with activity the call is arrived (ex. "bulletin", "radar" .. )
+	String from;
 	
 	private static final String TAG = "Touch";
 	// These matrices will be used to move and zoom image
@@ -40,7 +44,7 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
 	   
 	   
 	// Limit zoomable/pannable image
-	private ImageView view;
+	private ImageView imageView;
 	private float[] matrixValues = new float[9];
 	private float maxZoom;
 	private float minZoom;
@@ -56,35 +60,89 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.full_screen);
+        imageView = (ImageView) findViewById(R.id.full_screen_image);
 
-        
 	    Bundle extras=getIntent().getExtras();
+	    // the extra "from" tells from which activity comes the intent
+	    from=extras.getString("from");
   	    String title=extras.getString("title");
-  	    String url=extras.getString("url"); 
-        
-  	    Toast toast = Toast.makeText(getBaseContext(), title, Toast.LENGTH_SHORT);
-  	    toast.setGravity(Gravity.BOTTOM, 0, 0);
-  	    toast.show();
-  	    
-        view = (ImageView) findViewById(R.id.full_screen_image);
-        
-        ImageLoader imageLoader  = new ImageLoader(this);
-        Bitmap bmp = imageLoader.getBitmap(url);
-        view.setImageBitmap(bmp);
+  	    String url=extras.getString("url");
+	    
+	    Bitmap bitmap=null;
+	    	    
+	    // if the intent arrives from BulletinActivity (ForecastFragment)
+	    if(from.equals("bulletin")){
+	    	bitmap= ImageLoader.loadBitmapFromUrl(url);
 
-        view.setOnTouchListener(this);
-        
-     // Work around a Cupcake bug
-        matrix.setTranslate(1f, 1f);
-        view.setImageMatrix(matrix);
-        
+	    }
+	    // if the intent arrives from RadarFragment (RadarFragment)
+	    else if(from.equals("radar")){
+	        ImageLoader imageLoader  = new ImageLoader(this);
+	        bitmap = imageLoader.getBitmap(url);
+	    }
+	    
+
+    	if( bitmap==null  ){ // if image is not load, set a default images thak tells to user to update datas or to connect
+    		Log.d("non caricataaaa", "aaa");
+    		// provo a settare l'immagine sotto che comunica che non è stata aggiornata l'applicazione e l'immagine non è disponibile
+    		//int stub_id= R.drawable.no_network;
+    		//imageView.setImageResource(stub_id);
+    		// altra prova, non va
+//    		bmp = BitmapFactory.decodeResource( getResources(),
+//                    R.drawable.no_network);
+    		// da provare
+//    		Drawable logo = context.getResources().getDrawable(R.drawable.banner);
+//    	    setBackgroundDrawable(logo);
+
+    		imageView.setImageBitmap(bitmap);
+    		Toast toast = Toast.makeText(getBaseContext(), "Immagine non disponibile, aggiorna i dati o connettiti", Toast.LENGTH_SHORT);
+    		toast.setGravity(Gravity.BOTTOM, 0, 0);
+    		toast.show();
+    	}
+    	
+    	else{ // resizes the image proportionally, for full screen dimensions
+    		// screen dimension
+    		Display display = getWindowManager().getDefaultDisplay(); 
+    		int displayWidth = display.getWidth();  // deprecated
+    		int displayHeight = display.getHeight();  // deprecated
+    		// new bitmap resized
+    		Bitmap bitmapResized=null;
+    		
+    		if( displayWidth < displayHeight ){ // portrait mode orientation
+    			// proportion: bitmapWidth:displayWidth = bitmapHeight:newHeight -> newHeight= (displayWidth*bitmapHeight)/bitmapWidth
+    			int newHeight = ( displayWidth * bitmap.getHeight() ) / bitmap.getWidth();
+    			bitmapResized = Bitmap.createScaledBitmap(bitmap, displayWidth , newHeight, true);
+    			
+    		}
+    		else{ // landscape mode orientation
+    			// proportion: bitmapHeight:displayHeight = bitmapWidth:newWidth -> newWidth= (displayHeight*bitmapWidth)/bitmapHeight
+    			int newWidth = ( displayHeight * bitmap.getWidth() ) / bitmap.getHeight();
+    			bitmapResized = Bitmap.createScaledBitmap(bitmap, newWidth , displayHeight, true);
+    		}
+    		
+    		imageView.setImageBitmap(bitmapResized);
+    		imageView.setOnTouchListener(this);    		
+    		
+    		// Work around a Cupcake bug
+    		matrix.setTranslate(1f, 1f);
+    		imageView.setImageMatrix(matrix);
+  	    
+    		Toast toast = Toast.makeText(getBaseContext(), title, Toast.LENGTH_SHORT);
+    		toast.setGravity(Gravity.BOTTOM, 0, 0);
+    		toast.show();
+    	}
+
     }
     
-    
+	
     @Override
     public void onBackPressed() {
     	Intent newintent = new Intent();
-    	newintent.setClass(FullScreenActivity.this, RadarActivity.class);
+    	if( from.equals("bulletin"))
+    		newintent.setClass(FullScreenActivity.this, BulletinActivity.class);
+    	else{ if( from.equals("radar"))
+    		newintent.setClass(FullScreenActivity.this, RadarActivity.class);
+    	}
 		startActivity(newintent);
     	
     }
@@ -113,15 +171,15 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
     	// set the max zoom and min zoom values
     	maxZoom = 4;
     	minZoom = 0.3f;
-    	height = view.getDrawable().getIntrinsicHeight();
-    	width = view.getDrawable().getIntrinsicWidth();
-    	viewRect = new RectF(0, 0, view.getWidth(), view.getHeight());
+    	height = imageView.getDrawable().getIntrinsicHeight();
+    	width = imageView.getDrawable().getIntrinsicWidth();
+    	viewRect = new RectF(0, 0, imageView.getWidth(), imageView.getHeight());
     }
 
     @Override
     public boolean onTouch(View v, MotionEvent rawEvent) {
     	WrapMotionEvent event = WrapMotionEvent.wrap(rawEvent);
-    	ImageView view = (ImageView) v;
+    	ImageView imageView = (ImageView) v;
 
     	// Dump touch event to log
     	dumpEvent(event);
@@ -206,12 +264,12 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
     		break;
     	}
 
-    	view.setImageMatrix(matrix);
+    	imageView.setImageMatrix(matrix);
     	return true; // indicate event was handled
     }
     
 
-    /** Show an event in the LogCat view, for debugging */
+    /** Show an event in the LogCat imageView, for debugging */
     private void dumpEvent(WrapMotionEvent event) {
     	String names[] = { "DOWN", "UP", "MOVE", "CANCEL", "OUTSIDE",
     			"POINTER_DOWN", "POINTER_UP", "7?", "8?", "9?" };

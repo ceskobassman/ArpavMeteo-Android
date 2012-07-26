@@ -81,24 +81,18 @@ public final class RadarFragment extends Fragment {
 		ImageView image = (ImageView) view.findViewById(R.id.radar_image);
 		imageLoader.DisplayImage(radarItem.getElementByName("img"), this.getActivity(), image);
 
+		// set listener for the radar ImageView image 
 	    image.setOnClickListener(new View.OnClickListener() {
-
-      
-	          
 	          @Override
 	          public void onClick(View v) {
-	        	Log.d("img", "click");
-                // in onCreate or any event where your want the user to
-                // select a file
                 Intent intent = new Intent( getActivity(), FullScreenActivity.class );
+                // extra "from" tells at FullScreenActivity from which activity arrives the intent
+                intent.putExtra("from", "radar" );
                 intent.putExtra("title", radarItem.getElementByName("title") );
                 intent.putExtra("url", radarItem.getElementByName("img") );
                 startActivity(intent);
 	          }
-	          
-	          
-
-	        });
+        });
 		
 		return view;
 	}

@@ -25,13 +25,16 @@ package it.redturtle.mobile.apparpav.utils;
 
 import it.redturtle.mobile.apparpav.R;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
 import java.util.Map;
@@ -42,6 +45,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.widget.ImageView;
 
 public class ImageLoader {
@@ -56,25 +60,37 @@ public class ImageLoader {
 		fileCache=new FileCache(context);
 	}
 
+	
 	int stub_id;
+	// receives url of image, the activity that invoked its, and the imagerView
+	// method looks for image radar: if image is stored in app's chache it keeps the stored image
 	public void DisplayImage(String url, Activity activity, ImageView imageView){
 		imageViews.put(imageView, url);
 		Bitmap bitmap=memoryCache.get(url);
+		
+		// if the image is stored in cache, load the images in imageView
 		if(bitmap!=null)
 			imageView.setImageBitmap(bitmap);
+		
+		// else, call method queuePhoto that manages the queue of images to load and the thread to load these images
+		// while the image is searched, if network is available sets image "stub", else sets image "no_network"
 		else {
 			queuePhoto(url, activity, imageView);
 			if(Util.isNetworkAvailable(activity) == true)
 				stub_id= R.drawable.stub;
-			else
+			else{
 				stub_id= R.drawable.no_network;
-			
+//
+//				Toast toast = Toast.makeText( activity.getApplicationContext(), R.string.not_connected_toast, Toast.LENGTH_SHORT);
+//				toast.show();
+//
+			}
 			imageView.setImageResource(stub_id);
 		}    
 	}
 
 	private void queuePhoto(String url, Activity activity, ImageView imageView){
-		//This ImageView may be used for other images before. So there may be some old tasks in the queue. We need to discard them. 
+		//This ImageView may be used for other images before. So there may be some old tasks in the queue. We need to discard them.
 		photosQueue.Clean(imageView);
 		PhotoToLoad p=new PhotoToLoad(url, imageView);
 		synchronized(photosQueue.photosToLoad){
@@ -87,7 +103,8 @@ public class ImageLoader {
 			photoLoaderThread.start();
 	}
 
-	private Bitmap getBitmap(String url) {
+	// takes image from cache if is stored, else downloads it from web
+	public Bitmap getBitmap(String url) {
 		File f=fileCache.getFile(url);
 
 		//from SD cache
@@ -152,12 +169,14 @@ public class ImageLoader {
 		}
 	}
 
+
 	PhotosQueue photosQueue=new PhotosQueue();
 
 	public void stopThread(){
 		photoLoaderThread.interrupt();
 	}
 
+	
 	//stores list of photos to download
 	class PhotosQueue{
 		private Stack<PhotoToLoad> photosToLoad=new Stack<PhotoToLoad>();
@@ -224,4 +243,29 @@ public class ImageLoader {
 		memoryCache.clear();
 		fileCache.clear();
 	}
+	
+	
+	public static Bitmap loadBitmapFromUrl(String url) {
+	    Bitmap bitmap = null;
+	    //InputStream in = null;
+	    //BufferedOutputStream out = null;
+
+    	try {
+    		
+   		    bitmap = BitmapFactory.decodeStream((InputStream)new URL(url).getContent());
+	    } catch (MalformedURLException e) {
+	    	e.printStackTrace();
+	    } 
+    	 // if image there isn't in the server (perhaps if the path is of an old images day if the dates aren't update)
+    	catch ( FileNotFoundException e){
+    		e.printStackTrace();
+	    	//Log.d("aggiorna!!", "agg");
+	    } catch (IOException e) {
+	    	e.printStackTrace();
+	    } 
+
+	    return bitmap;	    
+	}
+
+	
 }

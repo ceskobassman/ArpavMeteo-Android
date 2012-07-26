@@ -23,16 +23,20 @@ package it.redturtle.mobile.apparpav;
 
 import it.redturtle.mobile.apparpav.types.Forecast;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * @author Nicola Senno
@@ -132,7 +136,8 @@ public final class ForecastFragment extends Fragment {
 		webview.setWebChromeClient(new WebChromeClient() {});
 		webview.getSettings().setJavaScriptEnabled(true); 
 		webview.getSettings().setBuiltInZoomControls(true);
-		webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT); 
+		webview.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+		webview.setWebViewClient( new WebViewListener() );
 
 		String html = "<!doctype html>";
 		html += "<html>";
@@ -143,10 +148,12 @@ public final class ForecastFragment extends Fragment {
 		html += "<body style=\"font-family:Helvetica;font-size:small;\">";
 		html += "<div style=\"text-align:center;\"><b>"+forecast.getName()+"</b></div>";
 
+		
 		if(forecast.getType() == 1){
 			html += "<div style=\"text-align:center;\">";
 			html +=	"<p>"+forecast.getCaptionAt(0)+"</p>";
-			html +=	"<img src=\""+forecast.getPathAt(0)+"\" width=\"140\" style=\"padding:2px;\"/>";	
+			html +=	"<a href=\""+forecast.getPathAt(0)+"\"> <img src=\""+forecast.getPathAt(0)+"\" width=\"140\" style=\" border:0.1em solid LightBlue; padding:1px;\"/>  </a>";
+			Log.d("path", forecast.getPathAt(0));
 			html += "</div>";
 		}
 		if(forecast.getType() == 2){
@@ -155,11 +162,11 @@ public final class ForecastFragment extends Fragment {
 			html += "<div style=\"display:inline-block;\">";
 			html += "<div style=\"float:left;\">";
 			html +=	"<p>"+forecast.getCaptionAt(0)+"</p>";
-			html +=	"<img src=\""+forecast.getPathAt(0)+"\" width=\"140\" style=\"padding:2px;\"/>";	
+			html +=	"<a href=\""+forecast.getPathAt(0)+"\"> <img src=\""+forecast.getPathAt(0)+"\" width=\"140\" style=\" border:0.1em solid LightBlue; padding:2px;\"/> </a>";	
 			html += "</div>";
 			html +=	"<div style=\"float:left;\">";
 			html +=	"<p>"+forecast.getCaptionAt(1)+"</p>";
-			html +=	"<img  src=\""+forecast.getPathAt(1)+"\" width=\"140\" style=\"padding:2px;\"/>";
+			html +=	"<a href=\""+forecast.getPathAt(1)+"\"><img  src=\""+forecast.getPathAt(1)+"\" width=\"140\" style=\" border:0.1em solid LightBlue; padding:2px;\"/> </a>";
 			html +=	"</div>";
 			html +=	"</div>";
 			html +=	"</div>";
@@ -206,5 +213,38 @@ public final class ForecastFragment extends Fragment {
 	   };
 	}
 	//#######################################################
+	
+	
+	
+	
+	
+	// redefine a listener of WebView: it listen if a link is pressed and manages the event 
+	private class WebViewListener extends WebViewClient {
+	    @Override
+	    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//	        if (Uri.parse(url).getHost().equals("www.example.com")) {
+//	            // This is my web site, so do not override; let my WebView load the page
+//	            return false;
+//	        }
+//	        // Otherwise, the link is not for a page on my site, so launch another Activity that handles URLs
+//	        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+//	        startActivity(intent);
+	    	
+//	  	    Toast toast = Toast.makeText( getActivity(), url, Toast.LENGTH_SHORT);
+//	  	    toast.show();
+//	  	    Log.d("url", url);
+	  	    
+	        // in onCreate or any event where your want the user to select a file
+	        Intent intent = new Intent( getActivity(), FullScreenActivity.class );
+	        // extra "from" tells at FullScreenActivity from which activity arrives the intent
+	        intent.putExtra("from", "bulletin" );
+	        intent.putExtra("title", forecast.getName() );
+	        intent.putExtra("url", url );
+	        startActivity(intent);
+	  	    
+	        return true;
+	    }
+	}
+	
 	
 }

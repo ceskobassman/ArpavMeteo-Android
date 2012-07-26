@@ -70,6 +70,7 @@ public class Forecast implements Serializable {
 		this.title = title;
 	}
 
+	// return the number of forecast's images 
 	public int getType() {
 		if(listOfImages.size() == 0)
 			return 0;
