@@ -28,6 +28,7 @@ import it.redturtle.mobile.apparpav.utils.Util;
 import java.util.List;
 import java.util.Map;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -130,7 +131,7 @@ public class ConfActivity extends Activity implements OnItemClickListener {
 
 		if(currentstate == PREFERENCE){
 			Util.deleteSavedMunicipality(v.getContext(), (Municipality) (Municipality) map.get("municipality"));
-			Toast toast = Toast.makeText(this, "Località eliminata con successo!", 3);
+			Toast toast = Toast.makeText(this, "Località eliminata con successo!", Toast.LENGTH_SHORT);
 			toast.show();
 			currentstate--;
 		}
@@ -139,11 +140,11 @@ public class ConfActivity extends Activity implements OnItemClickListener {
 			List<Map<String, Object>> savedMunicipalities = Util.getSavedMunicipalitieslist(this);
 			if(savedMunicipalities.size() < 10){
 				Util.updateSavedMunicipalities(ConfActivity.this.getApplicationContext(), (Municipality) map.get("municipality"));
-				Toast toast = Toast.makeText(this, "Località aggiunta con successo!", 3);
+				Toast toast = Toast.makeText(this, "Località aggiunta con successo!", Toast.LENGTH_SHORT);
 				toast.show();
 				
 			} else {
-				Toast toast = Toast.makeText(this, "Il limite località di località memorizzabile è stato raggiunto", 4);
+				Toast toast = Toast.makeText(this, "Il limite località di località memorizzabile è stato raggiunto", Toast.LENGTH_SHORT);
 				toast.show();
 			}
 			currentstate = PREFERENCE;

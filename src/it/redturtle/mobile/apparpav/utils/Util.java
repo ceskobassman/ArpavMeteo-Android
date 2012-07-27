@@ -602,6 +602,7 @@ public class Util {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
 		int current_hours = calendar.get(Calendar.HOUR_OF_DAY);
+		// if current hours is > 13 save PM else save AM
 		editor.putString(KEY_LAST_SAVE, current_hours > 13? "PM":"AM");
 		editor.commit();
 	}
@@ -620,6 +621,7 @@ public class Util {
 		}
 	}
 
+	// method called every time the app is updating
 	public static void updateIsFirstRun(Context context){
 		SharedPreferences prefs = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
 		Editor editor = prefs.edit();

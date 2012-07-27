@@ -32,6 +32,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,7 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * @author Nicola Senno
@@ -80,6 +82,15 @@ public final class MeteogramFragment extends Fragment {
 		tv.setText(m.getName());
 		
 
+		Button buttonUpdate = (Button) view.findViewById(R.id.button_update);
+	    buttonUpdate.setOnClickListener(new View.OnClickListener() {
+		       @Override
+		       public void onClick(View v) {
+					Intent newintent = new Intent( context, MeteogramsActivity.class);
+					newintent.putExtra("reload", true);
+					startActivity(newintent);
+		       }
+		    });
 		
 		//###########################
 		// set listener for the button_swype_left and button_swype_right
@@ -123,6 +134,7 @@ public final class MeteogramFragment extends Fragment {
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 	}
+	
 	
 	//################################################
 	// activity listener interface for the button_swype_left and button_swype_right,

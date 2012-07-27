@@ -31,10 +31,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -71,7 +73,12 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 		Intent intent = getIntent();
 		boolean reload = intent.getBooleanExtra("reload", false);
 		if(reload){
-			this.pd = ProgressDialog.show(this, "Working..", "Downloading Data...", true, false);
+			this.pd = ProgressDialog.show(this, "Working..", "Downloading Data...\nPlease wait", true, false);
+			if( Util.isNetworkAvailable( getBaseContext() ) == false ){
+	    		Toast toast = Toast.makeText(getBaseContext(), "Network not available", Toast.LENGTH_SHORT);
+	    		toast.setGravity(Gravity.BOTTOM, 0, 25);
+	    		toast.show();
+			}
 			new InitialTask().execute();
 		}
 	}
@@ -94,11 +101,6 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 		
 		// METEO active
 		final Button meteo = (Button) this.findViewById(R.id.meteograms);
-		// ###########
-		// originally: disattiva bottone solo se non ci sono preferiti salvati
-		//if(!Util.isEmptySavedMunicipality(this))
-			//meteo.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.bg_footer_reversed));
-		// ############
 		meteo.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.bg_footer_reversed));
 		
 		// START BULLETINS
@@ -175,7 +177,7 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 		protected Object doInBackground(String... args) {
 			Context c = MeteogramsActivity.this.getApplicationContext();
 
-			// Upade will be skipped if not connection is available and if not the right time: after 1 AM or after 1 PM
+			// Update will be skipped if not connection is available and if not the right time: after 1 AM or after 1 PM
 			if(!Util.isUpdated(c) && Util.isNetworkAvailable(c)){
 				boolean isOKPLIST = PLISTParser.getPlist(c, Util.getPLIST(c));
 				boolean isOKXML = XMLParser.getXML(c, Util.getXML(c));

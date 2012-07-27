@@ -41,7 +41,7 @@
             android:layout_marginRight="3dp"
             android:layout_marginTop="3dp"
             android:gravity="fill_vertical"
-            android:src="@drawable/ic_delete3" >
+            android:src="@drawable/ic_delete" >
         </ImageView>
         <!--
              <Button

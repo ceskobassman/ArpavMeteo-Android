@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="2dp"
-            android:background="@drawable/arrow_left"
+            
+            android:background="@drawable/arrow_left_button"
             android:text="" />
 
         <TextView
@@ -27,22 +27,32 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/button_swype_right"
             android:layout_toRightOf="@+id/button_swype_left"
+            android:layout_toLeftOf="@+id/button_update"
             android:gravity="center"
             android:textColor="#FFF"
-            android:textSize="19dp"
+            android:textSize="16dp"
             android:typeface="sans" 
             android:text="" />
 
+        
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/button_swype_right"
+            android:background="@drawable/ic_menu_refresh"
+            android:text="" />
+        
+        
         <Button
             android:id="@+id/button_swype_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="2dp"
-            android:background="@drawable/arrow_right"
+            android:background="@drawable/arrow_right_button"
             android:text="" />
 
     </RelativeLayout>
