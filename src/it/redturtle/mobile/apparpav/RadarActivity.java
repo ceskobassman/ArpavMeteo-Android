@@ -92,6 +92,7 @@ public class RadarActivity extends IndicatorActivity implements RadarFragment.On
 			newintent.setClass(this, MeteogramsActivity.class);
 			newintent.putExtra("state", 1);
 			startActivity(newintent);
+			finish();
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);

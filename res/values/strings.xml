@@ -19,5 +19,6 @@
     <string name="denom">Agenzia Regionale per la Prevenzione e Protezione Ambientale del Veneto"</string>
     <string name="description_image_home">Arpav Immage</string>
     <string name="not_connected_toast">Connect to network to update image!</string>
+    <string name="no_network">Network not available</string>
 
 </resources>

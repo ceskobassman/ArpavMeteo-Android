@@ -73,11 +73,13 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 		Intent intent = getIntent();
 		boolean reload = intent.getBooleanExtra("reload", false);
 		if(reload){
-			this.pd = ProgressDialog.show(this, "Working..", "Downloading Data...\nPlease wait", true, false);
+			this.pd = ProgressDialog.show(this, "Working..", "Downloading Data..\nPlease wait", true, false);
 			if( Util.isNetworkAvailable( getBaseContext() ) == false ){
-	    		Toast toast = Toast.makeText(getBaseContext(), "Network not available", Toast.LENGTH_SHORT);
+	    		Toast toast = Toast.makeText(getBaseContext(), R.string.no_network, Toast.LENGTH_SHORT);
 	    		toast.setGravity(Gravity.BOTTOM, 0, 25);
 	    		toast.show();
+	    		pd.dismiss();
+	    		return;
 			}
 			new InitialTask().execute();
 		}
@@ -218,5 +220,6 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 	}
 	
 	// #################################
+	
 	
 }
