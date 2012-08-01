@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app>
+<data_emissione date="Bollettino del 09/05 alle 13:00" />
+<meteogrammi>
+<meteogramma zoneid="1" name="Dolomiti Nord-Est">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          			<single_row title="Temperatura quota" type="image" value="t1.png" />
+          			<single_row title="Temperatura valli" type="image" value="t1.png" />
+          			<single_row title="Precipitazioni" type="text" value="locali anche a carattere di rovescio" />
+					<single_row title="Probabilita' precipitazione" type="text" value="40%" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="e6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="forti anche a carattere di rovescio/temporale" value2="Pioggia mista a neve" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="2" name="Dolomiti Sud-Ovest">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura quota" type="image" value="t1.png" />
+          <single_row title="Temperatura valli" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="locali anche a carattere di rovescio" />
+					<single_row title="Probabilita' precipitazione" type="text" value="40%" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="e6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="forti anche a carattere di rovescio/temporale" value2="Pioggia mista a neve" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="3" name="Belluno e Prealpi orientali">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura quota" type="image" value="t1.png" />
+          <single_row title="Temperatura valli" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="locali anche a carattere di rovescio" />
+					<single_row title="Probabilita' precipitazione" type="text" value="10%" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="e6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Pioggia mista a neve" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="4" name="Prealpi centrali">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura quota" type="image" value="t1.png" />
+          <single_row title="Temperatura valli" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="locali anche a carattere di rovescio" />
+					<single_row title="Probabilita' precipitazione" type="text" value="10%" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="e6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Pioggia mista a neve" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="5" name="Pedemontana orientale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c5.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="60%" value2="70%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="6" name="Treviso e pianura orientale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a2.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c5.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="60%" value2="70%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="7" name="Veneziano orientale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a2.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+          <single_row title="Vento" type="text" value="Deboli sudorientali" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli sudorientali"  value2="Deboli sudorientali" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli sudorientali"  value2="Deboli sudorientali" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c5.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="60%" value2="70%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="8" name="Prealpi occidentali">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura quota" type="image" value="t1.png" />
+          <single_row title="Temperatura valli" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="locali anche a carattere di rovescio" />
+					<single_row title="Probabilita' precipitazione" type="text" value="10%" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura quota" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Temperatura valli" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="e6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Pioggia mista a neve" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="9" name="Vicenza e pedemontana">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="70%" value2="80%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="10" name="Padova e pianura centrale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c5.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="60%" value2="70%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="11" name="Venezia e litorale centrale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a2.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+          <single_row title="Vento" type="text" value="Deboli sudorientali" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli da nordest"    value2="Deboli sudorientali" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli sudorientali"    value2="Deboli sudorientali" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c5.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="60%" value2="70%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="12" name="Litorale meridionale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a2.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+          <single_row title="Vento" type="text" value="Deboli sudorientali" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli da nordest"   value2="Deboli sudorientali" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli sudorientali"   value2="Deboli sudorientali" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c5.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="60%" value2="70%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="13" name="Rovigo e pianura meridionale">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="70%" value2="80%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="14" name="Verona e pedemontana">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a1.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="70%" value2="80%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+<meteogramma zoneid="15" name="Area del Garda">
+<slots>
+        <slot>
+					<single_row title="Titolo dello slot" type="title" value=" 9 maggio pomeriggio" />
+					<single_row title="Cielo" type="image" value="a3.png" />
+          <single_row title="Temperatura" type="image" value="t1.png" />
+          <single_row title="Precipitazioni" type="text" value="generalmente assenti" />
+					<single_row title="Probabilita' precipitazione" type="text" value="" />
+					<single_row title="Quota neve" type="text" value="" />
+          <single_row title="Vento" type="text" value="Deboli variabili" />
+					<single_row title="Attendibilita'" type="text" value="ottima" />
+				</slot>
+				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="10 maggio mattino" value2="10 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a1.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t5.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli settentrionali"          value2="Deboli meridionali" />
+					<double_row title="Attendibilita'" type="text" value1="ottima" value2="ottima" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="11 maggio mattino" value2="11 maggio pomeriggio" />
+					<double_row title="Cielo" type="image" value1="a2.png" value2="a2.png"/>
+					<double_row title="Temperatura" type="image" value1="t4.png" value2="t1.png" />
+					<double_row title="Precipitazioni" type="text" value1="assenti" value2="assenti" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="" value2="" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+          <double_row title="Vento" type="text" value1="Deboli settentrionali"          value2="Deboli meridionali" />
+					<double_row title="Attendibilita'" type="text" value1="buona" value2="buona" />
+				</slot>
+ 				<slot>
+					<double_row title="Titoli dello slot" type="title" value1="12 maggio" value2="13 maggio" />
+					<double_row title="Cielo" type="image" value1="c5.png" value2="c6.png"/>
+					<double_row title="Precipitazioni" type="text" value1="Rovesci o temporali sparsi" value2="Rovesci o temporali sparsi" />
+					<double_row title="Probabilita' precipitazione" type="text" value1="70%" value2="80%" />
+					<double_row title="Quota neve" type="text" value1="" value2="" />
+					<double_row title="Attendibilita'" type="text" value1="scarsa" value2="scarsa" />
+				</slot>
+</slots>
+</meteogramma>
+
+</meteogrammi>
+<bollettini>
+
+<bollettino bollettinoid="MV" name="Meteo Veneto" title="Bollettino del  9 maggio">
+<slots>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_0.png" caption=" 9 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Previsione: </b>tempo parzialmente soleggiato, con ampi spazi di sereno alternati a qualche velatura in transito e a degli annuvolamenti cumuliformi in montagna specie verso Nord.
+Sulle zone montane e in particolare sulle Dolomiti sar&agrave; possibile qualche locale precipitazione, di modesta entit&agrave; salvo occasionali brevi rovesci.]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_1.png" caption="10 maggio mattina" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_2.png" caption="10 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Tempo atteso: </b>tempo generalmente stabile e soleggiato con cielo sereno o poco nuvoloso, salvo modeste velature in transito e locali addensamenti cumuliformi a ridosso dei rilievi durante le ore pi&ugrave; calde.<br /><b>Precipitazioni: </b>assenti.<br /><b>Temperature: </b>minime senza variazioni di rilievo o in lieve aumento in montagna, massime in moderato rialzo con valori superiori alla norma.  <br /><b>Venti: </b>In montagna (oltre i 1500m) deboli occidentali, in pianura generalmente deboli variabili, a regime di brezza lungo la costa. <br /><b>Mare: </b>calmo o poco mosso.<br /><b>Attendibilit&agrave;: </b>ottima<br />]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_3.png" caption="11 maggio mattina" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_4.png" caption="11 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Tempo atteso: </b>tempo stabile e soleggiato, di stampo estivo, con cielo in prevalenza sereno o poco nuvoloso.<br /><b>Precipitazioni: </b>assenti.<br /><b>Temperature: </b>in ulteriore rialzo con valori ben superiori alla media del periodo.<br /><b>Venti: </b><br /><b>Mare: </b>calmo o poco mosso.<br /><b>Attendibilit&agrave;: </b>buona<br />]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_5.png" caption="12 maggio" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MV_6.png" caption="13 maggio" />
+					<text>
+                        <![CDATA[<b>Tendenza per domenica 13: </b>tempo da perturbato a instabile; cielo in prevalenza nuvoloso con nubi in attenuazione dal pomeriggio. Precipitazioni anche a carattere di rovescio o temporale nella notte e al mattino, in probabile diradamento dal pomeriggio. Limite neve in calo, anche sotto i 2000m. Temperature in marcato calo, venti sostenuti da Nord-Est, anche forti in prossimit&agrave; della costa.<br /><b>Attendibilit&agrave;: </b>scarsa<br />]]>
+					</text>
+				</slot>
+</slots>
+</bollettino>
+
+<bollettino bollettinoid="DM" name="Dolomiti Meteo" title="Bollettino del  9 maggio">
+<slots>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_0.png" caption=" 9 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Previsione: </b>tempo in parte soleggiato per addensamenti sui rilievi, sviluppo di cumuli e velatura per nubi alte da Ovest, pi&ugrave; significativa verso sera. Il rischio di rovesci pomeridiani sar&agrave; globalmente medio-basso (20/30%), pi&ugrave; presente sui settori dolomitici, ed in particolare sui settori settentrionali (30/40%).]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_1.png" caption="10 maggio mattina" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_2.png" caption="10 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Tempo atteso: </b>sulle Prealpi il tempo sar&agrave; in prevalenza soleggiato con lieve velatura per nubi alte e qualche sporadico cumulo attorno ai rilievi, durante le ore pi&ugrave; calde; su Dolomiti i cumuli potranno essere un po' pi&ugrave; presenti durante le ore pomeridiane, ma nel complesso il tempo sar&agrave; anche qui buono. Clima anormalmente mite, specie in quota, con valori di 6/8&deg;C superiori alla norma, e massime attorno a 16/19&deg;C a 1500 m e 19/22&deg;C a 1000 m. Clima anormalmente mite, specie in quota, con valori di 6/8&deg;C superiori alla norma, e massime attorno a 16/19&deg;C a 1500 m e 19/22&deg;C a 1000 m.<br /><b>Precipitazioni: </b><br /><b>Temperature: </b>in ulteriore aumento.
+A 2000 m: min 6&deg;C max 15&deg;C; a 3000 m: min 1&deg;C max 5&deg;C.<br /><b>Venti: </b>nelle valli da deboli a moderati per brezze; in quota deboli occidentali, a 5-15 km/h a 2000 m, 5-15 km/h a 3000 m.<br /><b>Attendibilit&agrave;: </b>buona<br />]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_3.png" caption="11 maggio mattina" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_4.png" caption="11 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Tempo atteso: </b>tempo soleggiato con lievissima velatura per nubi alte e qualche sporadico cumulo al pomeriggio. Clima ancora pi&ugrave; caldo rispetto a gioved&igrave;, estivo, anomalo per la stagione, con valori massimi fra i 28/30&deg;C nei fondovalle prealpini. <br /><b>Precipitazioni: </b><br /><b>Temperature: </b>in ulteriore aumento, di 2/4&deg;C rispetto a gioved&igrave;.
+A 2000 m: min 10&deg;C max 18&deg;C; a 3000 m: min 3&deg;C max 7&deg;C.<br /><b>Venti: </b>nelle valli da deboli a moderati per brezze; in quota deboli occidentali, a 5-15 km/h a 2000 m, 5-15 km/h a 3000 m.<br /><b>Attendibilit&agrave;: </b>buona<br />]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_5.png" caption="12 maggio" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_DM_6.png" caption="13 maggio" />
+					<text>
+                        <![CDATA[<b>Tendenza per domenica 13: </b>cielo in prevalenza nuvoloso, con preciptazioni diffuse, in particolare nelle prime ore nella notte su Prealpi. Limite neve sotto i 2000 m. Clima decisamente pi&ugrave; fresco con valori massimi in calo anche di 10/15&deg;C  rispetto a sabato.<br /><b>Attendibilit&agrave;: </b>scarsa<br />]]>
+					</text>
+				</slot>
+</slots>
+</bollettino>
+
+<bollettino bollettinoid="MP" name="Meteo Pianura Veneta" title="Bollettino del  9 maggio">
+<slots>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_0.png" caption=" 9 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Previsione: </b>tempo parzialmente soleggiato, con ampi spazi di sereno alternati a delle velature in transito e qualche addensamento sulla pedemontana. ]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_1.png" caption="10 maggio mattina" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_2.png" caption="10 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Tempo atteso: </b>tempo stabile e soleggiato con cielo sereno o poco nuvoloso, salvo modeste velature in transito e locali addensamenti sulla pedemontana durante le ore pi&ugrave; calde.<br /><b>Precipitazioni: </b>assenti.<br /><b>Temperature: </b>minime senza variazioni di rilievo, massime in moderato rialzo con valori superiori alla norma.  <br /><b>Venti: </b>generalmente deboli variabili, a regime di brezza lungo la costa. <br /><b>Mare: </b>calmo o poco mosso.<br /><b>Attendibilit&agrave;: </b>ottima<br />]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_3.png" caption="11 maggio mattina" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_4.png" caption="11 maggio pomeriggio" />
+					<text>
+                        <![CDATA[<b>Tempo atteso: </b>tempo stabile e soleggiato, di stampo estivo, con cielo in prevalenza sereno o poco nuvoloso.<br /><b>Precipitazioni: </b>assenti.<br /><b>Temperature: </b>in ulteriore rialzo con valori ben superiori alla media del periodo.<br /><b>Venti: </b>generalmente deboli variabili, a regime di brezza lungo la costa. <br /><b>Mare: </b>calmo o poco mosso.<br /><b>Attendibilit&agrave;: </b>buona<br />]]>
+					</text>
+				</slot>
+				<slot>
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_5.png" caption="12 maggio" />
+					<img src="http://www.arpa.veneto.it/apparpav/images/map_20120509_MP_6.png" caption="13 maggio" />
+					<text>
+                        <![CDATA[<b>Tendenza per domenica 13: </b>tempo da perturbato a instabile; cielo in prevalenza nuvoloso o molto nuvoloso al mattino, nubi in attenuazione dal pomeriggio. Precipitazioni anche a carattere di rovescio o temporale nella notte e al mattino, in probabile diradamento dal pomeriggio. Temperature in marcato calo, venti sostenuti da Nord-Est, anche forti in prossimit&agrave; della costa.<br /><b>Attendibilit&agrave;: </b>scarsa<br />]]>
+					</text>
+				</slot>
+</slots>
+</bollettino>
+
+</bollettini>
+
+</app>

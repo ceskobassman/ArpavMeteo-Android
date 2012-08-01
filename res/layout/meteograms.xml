@@ -10,7 +10,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="44dp"
-        android:background="@drawable/bar" >
+        android:background="@drawable/bg_gradient_top_bar" >
 
         <Button
             android:id="@+id/button_swype_left"

@@ -222,6 +222,8 @@ public final class ForecastFragment extends Fragment {
 	private class WebViewListener extends WebViewClient {
 	    @Override
 	    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+	    	
+	    	
 //	        if (Uri.parse(url).getHost().equals("www.example.com")) {
 //	            // This is my web site, so do not override; let my WebView load the page
 //	            return false;
@@ -234,13 +236,15 @@ public final class ForecastFragment extends Fragment {
 //	  	    toast.show();
 //	  	    Log.d("url", url);
 	  	    
-	        // in onCreate or any event where your want the user to select a file
-	        Intent intent = new Intent( getActivity(), FullScreenActivity.class );
-	        // extra "from" tells at FullScreenActivity from which activity arrives the intent
-	        intent.putExtra("from", "bulletin" );
-	        intent.putExtra("title", forecast.getName() );
-	        intent.putExtra("url", url );
-	        startActivity(intent);
+	    	
+	    	
+//	        // in onCreate or any event where your want the user to select a file
+//	        Intent intent = new Intent( getActivity(), FullScreenActivity.class );
+//	        // extra "from" tells at FullScreenActivity from which activity arrives the intent
+//	        intent.putExtra("from", "bulletin" );
+//	        intent.putExtra("title", forecast.getName() );
+//	        intent.putExtra("url", url );
+//	        startActivity(intent);
 	  	    
 	        return true;
 	    }

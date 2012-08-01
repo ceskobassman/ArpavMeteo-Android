@@ -133,31 +133,7 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
     	}
 
     }
-    
-	
-    @Override
-    public void onBackPressed() {
-    	Intent newintent = new Intent();
-    	if( from.equals("bulletin"))
-    		newintent.setClass(FullScreenActivity.this, BulletinActivity.class);
-    	else{ if( from.equals("radar"))
-    		newintent.setClass(FullScreenActivity.this, RadarActivity.class);
-    	}
-		startActivity(newintent);
-    	
-    }
-   
-//    @Override
-//    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-//        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-//            finish();
-//            return true;
-//        }
-//
-//        return super.onKeyDown(keyCode, event);
-//    }
-
-    
+        
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
