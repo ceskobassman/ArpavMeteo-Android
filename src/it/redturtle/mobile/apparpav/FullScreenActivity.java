@@ -82,22 +82,13 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
 	    }
 	    
 
-    	if( bitmap==null  ){ // if image is not load, set a default images thak tells to user to update datas or to connect
+    	if( bitmap==null  ){ // if image is not load, terminate activity
     		Log.d("non caricata", "non caricata");
-    		// provo a settare l'immagine sotto che comunica che non è stata aggiornata l'applicazione e l'immagine non è disponibile
-    		//int stub_id= R.drawable.no_network;
-    		//imageView.setImageResource(stub_id);
-    		// altra prova, non va
-//    		bmp = BitmapFactory.decodeResource( getResources(),
-//                    R.drawable.no_network);
-    		// da provare
-//    		Drawable logo = context.getResources().getDrawable(R.drawable.banner);
-//    	    setBackgroundDrawable(logo);
 
-//    		imageView.setImageBitmap(bitmap);
     		Toast toast = Toast.makeText(getBaseContext(), "Immagine non disponibile, aggiorna i dati o connettiti", Toast.LENGTH_SHORT);
     		toast.setGravity(Gravity.BOTTOM, 0, 0);
     		toast.show();
+    		finish();
     	}
     	
     	else{ // resizes the image proportionally, for full screen dimensions
