@@ -43,19 +43,7 @@
             android:gravity="fill_vertical"
             android:src="@drawable/ic_delete" >
         </ImageView>
-        <!--
-             <Button
-            android:id="@+id/delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginTop="1dp"
-            android:background="@drawable/ic_delete"
-            android:gravity="fill_vertical" />
-        -->
+
     </RelativeLayout>
 
 </LinearLayout>

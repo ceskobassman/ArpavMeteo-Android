@@ -110,7 +110,6 @@ public final class ForecastFragment extends Fragment {
 					pm.setEnabled(false);
 				}
 		}
-		// #####################################
 		
 		//###########################
 		// set listener for the button_swype_left and button_swype_right

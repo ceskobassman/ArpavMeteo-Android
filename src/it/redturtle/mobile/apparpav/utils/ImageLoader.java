@@ -247,8 +247,6 @@ public class ImageLoader {
 	
 	public static Bitmap loadBitmapFromUrl(String url) {
 	    Bitmap bitmap = null;
-	    //InputStream in = null;
-	    //BufferedOutputStream out = null;
 
     	try {
     		

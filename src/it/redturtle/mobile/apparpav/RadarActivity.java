@@ -65,7 +65,6 @@ public class RadarActivity extends IndicatorActivity implements RadarFragment.On
 				bulletins.setBackgroundDrawable(RadarActivity.this.getResources().getDrawable(R.drawable.bg_footer_reversed));
 				Intent newintent = new Intent();
 				newintent.setClass(RadarActivity.this, BulletinActivity.class);
-				//startActivityForResult(newintent, -1);
 				startActivity(newintent);
 			}
 		});
@@ -110,6 +109,5 @@ public class RadarActivity extends IndicatorActivity implements RadarFragment.On
 		mPager.setCurrentItem( mPager.getCurrentItem()+1 );
 	}
 	
-	// #################################
 	
 }
