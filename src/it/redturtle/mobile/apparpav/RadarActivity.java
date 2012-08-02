@@ -24,7 +24,9 @@ package it.redturtle.mobile.apparpav;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -92,7 +94,6 @@ public class RadarActivity extends IndicatorActivity implements RadarFragment.On
 			newintent.setClass(this, MeteogramsActivity.class);
 			newintent.putExtra("state", 1);
 			startActivity(newintent);
-			finish();
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);

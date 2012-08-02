@@ -69,8 +69,10 @@ public class ImageLoader {
 		Bitmap bitmap=memoryCache.get(url);
 		
 		// if the image is stored in cache, load the images in imageView
-		if(bitmap!=null)
+		if(bitmap!=null){
 			imageView.setImageBitmap(bitmap);
+			imageView.setTag("loaded");
+		}
 		
 		// else, call method queuePhoto that manages the queue of images to load and the thread to load these images
 		// while the image is searched, if network is available sets image "stub", else sets image "no_network"
@@ -78,14 +80,11 @@ public class ImageLoader {
 			queuePhoto(url, activity, imageView);
 			if(Util.isNetworkAvailable(activity) == true)
 				stub_id= R.drawable.stub;
-			else{
+			else
 				stub_id= R.drawable.no_network;
-//
-//				Toast toast = Toast.makeText( activity.getApplicationContext(), R.string.not_connected_toast, Toast.LENGTH_SHORT);
-//				toast.show();
-//
-			}
+				
 			imageView.setImageResource(stub_id);
+			imageView.setTag("not_loaded");
 		}    
 	}
 
@@ -232,8 +231,10 @@ public class ImageLoader {
 		ImageView imageView;
 		public BitmapDisplayer(Bitmap b, ImageView i){bitmap=b;imageView=i;}
 		public void run(){
-			if(bitmap!=null)
+			if(bitmap!=null){
 				imageView.setImageBitmap(bitmap);
+				imageView.setTag("loaded");
+			}
 			else
 				imageView.setImageResource(stub_id);
 		}
@@ -257,7 +258,6 @@ public class ImageLoader {
     	 // if image there isn't in the server (perhaps if the path is of an old images day if the dates aren't update)
     	catch ( FileNotFoundException e){
     		e.printStackTrace();
-	    	//Log.d("aggiorna!!", "agg");
 	    } catch (IOException e) {
 	    	e.printStackTrace();
 	    } 

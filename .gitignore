@@ -1,12 +1,24 @@
-# Eclipse file project
-#.classpath
-#.project
-
 *.*~
 
-TO_DO.*
-gen
-zz_lory
-#libs/
+
+# Eclipse file project
+.classpath
+.project
+
+
+# project dir
+gen/
+libs/
 bin/
+
+
+# personal dir
+zz_lory/
+
+
+# personal file
+id_rsa*
+apparpav.keystore
+README_arpav.txt
+
 

@@ -131,7 +131,7 @@ public class ConfActivity extends Activity implements OnItemClickListener {
 
 		if(currentstate == PREFERENCE){
 			Util.deleteSavedMunicipality(v.getContext(), (Municipality) (Municipality) map.get("municipality"));
-			Toast toast = Toast.makeText(this, "Località eliminata con successo!", Toast.LENGTH_SHORT);
+			Toast toast = Toast.makeText(this, R.string.municipality_deleted_successfully, Toast.LENGTH_SHORT);
 			toast.show();
 			currentstate--;
 		}
@@ -140,11 +140,11 @@ public class ConfActivity extends Activity implements OnItemClickListener {
 			List<Map<String, Object>> savedMunicipalities = Util.getSavedMunicipalitieslist(this);
 			if(savedMunicipalities.size() < 10){
 				Util.updateSavedMunicipalities(ConfActivity.this.getApplicationContext(), (Municipality) map.get("municipality"));
-				Toast toast = Toast.makeText(this, "Località aggiunta con successo!", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(this, R.string.municipality_added_successfully, Toast.LENGTH_SHORT);
 				toast.show();
 				
 			} else {
-				Toast toast = Toast.makeText(this, "Il limite località di località memorizzabile è stato raggiunto", Toast.LENGTH_SHORT);
+				Toast toast = Toast.makeText(this, R.string.max_municipalities_notice, Toast.LENGTH_SHORT);
 				toast.show();
 			}
 			currentstate = PREFERENCE;

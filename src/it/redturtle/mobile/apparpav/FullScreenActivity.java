@@ -13,6 +13,7 @@ import android.util.FloatMath;
 import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -83,10 +84,8 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
 	    
 
     	if( bitmap==null  ){ // if image is not load, terminate activity
-    		Log.d("non caricata", "non caricata");
-
-    		Toast toast = Toast.makeText(getBaseContext(), "Immagine non disponibile, aggiorna i dati o connettiti", Toast.LENGTH_SHORT);
-    		toast.setGravity(Gravity.BOTTOM, 0, 0);
+    		Toast toast = Toast.makeText(getBaseContext(), R.string.img_not_available, Toast.LENGTH_SHORT);
+    		toast.setGravity(Gravity.BOTTOM, 0, 25);
     		toast.show();
     		finish();
     	}
@@ -119,11 +118,29 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
     		imageView.setImageMatrix(matrix);
   	    
     		Toast toast = Toast.makeText(getBaseContext(), title, Toast.LENGTH_SHORT);
-    		toast.setGravity(Gravity.BOTTOM, 0, 0);
+    		toast.setGravity(Gravity.BOTTOM, 0, 25);
     		toast.show();
     	}
 
     }
+	
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if (keyCode == KeyEvent.KEYCODE_BACK) {
+			Intent newintent = new Intent();
+			if( from.equals("radar")){
+				newintent.setClass(this, RadarActivity.class);
+				newintent.putExtra("state", 1);
+							
+			}
+			else{
+				newintent.setClass(this, BulletinActivity.class);
+			}
+			startActivity(newintent);
+	    }
+	    return super.onKeyDown(keyCode, event);
+	}
         
 
     @Override

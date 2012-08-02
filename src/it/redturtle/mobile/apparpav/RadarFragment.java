@@ -22,6 +22,7 @@
 package it.redturtle.mobile.apparpav;
 
 import it.redturtle.mobile.apparpav.utils.ImageLoader;
+import it.redturtle.mobile.apparpav.utils.Util;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -30,12 +31,14 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * @author Nicola Senno
@@ -85,12 +88,30 @@ public final class RadarFragment extends Fragment {
 	    image.setOnClickListener(new View.OnClickListener() {
 	          @Override
 	          public void onClick(View v) {
-                Intent intent = new Intent( getActivity(), FullScreenActivity.class );
-                // extra "from" tells at FullScreenActivity from which activity arrives the intent
-                intent.putExtra("from", "radar" );
-                intent.putExtra("title", radarItem.getElementByName("title") );
-                intent.putExtra("url", radarItem.getElementByName("img") );
-                startActivity(intent);
+	        	  ImageView image = (ImageView) v.findViewById(R.id.radar_image);
+	        	  String tag = null; 
+	        	  tag= (String)image.getTag();
+	        	  // if radar_image is not loaded, it contains the tag "not_loaded" so FullScreenActivity can't start
+	        	  if( tag.equals("not_loaded") ){
+	        		  if(Util.isNetworkAvailable(getActivity().getBaseContext()) == false){
+		          		  Toast toast = Toast.makeText( getActivity().getBaseContext(), R.string.no_network, Toast.LENGTH_SHORT);
+		          		  toast.setGravity(Gravity.BOTTOM, 0, 25);
+		          		  toast.show();
+		          		  return;
+	        		  }
+	        		  
+	          		  Toast toast = Toast.makeText( getActivity().getBaseContext(), R.string.loading, Toast.LENGTH_SHORT);
+	          		  toast.setGravity(Gravity.BOTTOM, 0, 25);
+	          		  toast.show();
+	          		  return;
+	        	  }
+	        	  
+	        	  Intent intent = new Intent( getActivity(), FullScreenActivity.class );
+	        	  // extra "from" tells at FullScreenActivity from which activity arrives the intent
+	        	  intent.putExtra("from", "radar" );
+	        	  intent.putExtra("title", radarItem.getElementByName("title") );
+	        	  intent.putExtra("url", radarItem.getElementByName("img") );
+	        	  startActivity(intent);
 	          }
         });
 		

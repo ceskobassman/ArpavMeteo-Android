@@ -54,7 +54,7 @@ public class MeteogramsActivity extends IndicatorActivity implements MeteogramFr
 		setContentView(R.layout.simple_circles);
 
 		if(Util.isFirstRun(this)){
-			this.pd = ProgressDialog.show(this, "Working..", "Preparing data...\nNetwork connection is recommended", true, false);
+			this.pd = ProgressDialog.show(this, "Working..", "Preparing data..\nNetwork connection is recommended", true, false);
 			new InitialTask().execute();
 
 		} else {
