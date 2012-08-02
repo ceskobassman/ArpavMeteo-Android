@@ -78,11 +78,11 @@ public class FullScreenActivity extends Activity implements OnTouchListener {
 	    }
 	    // if the intent arrives from RadarFragment (RadarFragment)
 	    else if(from.equals("radar")){
-	        ImageLoader imageLoader  = new ImageLoader(this);
+	        ImageLoader imageLoader = new ImageLoader(this);
 	        bitmap = imageLoader.getBitmap(url);
 	    }
 	    
-
+	    
     	if( bitmap==null  ){ // if image is not load, terminate activity
     		Toast toast = Toast.makeText(getBaseContext(), R.string.img_not_available, Toast.LENGTH_SHORT);
     		toast.setGravity(Gravity.BOTTOM, 0, 25);
