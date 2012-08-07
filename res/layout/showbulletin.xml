@@ -12,75 +12,134 @@
         android:background="@drawable/bg_gradient_top_bar"
         android:gravity="center" >
         
-        <Button
+        <ImageButton
             android:id="@+id/button_swype_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/arrow_left_button"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_swipe_left"
             android:text="" />
         
-        <Button
-            android:id="@+id/mv"
+        <ImageView
+            android:id="@+id/bar1"
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="7dp"
-            android:layout_marginRight="3dp"
-            android:layout_toLeftOf="@+id/dm"
-            android:background="@drawable/button_style"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="@string/mv"
-            android:textColor="#000"
-            android:textSize="12dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/button_swype_left"
+            android:maxWidth="1dp"
+            android:src="@android:drawable/status_bar_item_app_background" />
         
-        <Button
-            android:id="@+id/dm"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="7dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginRight="3dp"
-            android:background="@drawable/button_style"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="@string/dm"
-            android:textColor="#000"
-            android:textSize="12dp" />
-            
-        <Button
-            android:id="@+id/pm"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/dm"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="7dp"
-            android:layout_marginLeft="3dp"
-            android:background="@drawable/button_style"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="@string/pm"
-            android:textColor="#000"
-            android:textSize="12dp" />
+            android:layout_toLeftOf="@+id/bar2"
+            android:layout_toRightOf="@+id/bar1" >
+
+            <Button
+                android:id="@+id/mv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@+id/dm"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_style"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/mv"
+                android:textColor="#000"
+                android:textSize="12dp" />
 
 
-        <Button
+            <Button
+                android:id="@+id/dm"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_style"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/dm"
+                android:textColor="#000"
+                android:textSize="12dp" />
+        
+            <Button
+                android:id="@+id/pm"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/dm"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_style"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/pm"
+                android:textColor="#000"
+                android:textSize="12dp" />
+        
+        </RelativeLayout>
+        
+        <ImageView
+            android:id="@+id/bar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:maxWidth="1dp"
+            android:layout_toLeftOf="@+id/button_menu"
+            android:src="@android:drawable/status_bar_item_app_background" />
+        
+
+                
+        <ImageButton
+            android:id="@+id/button_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/bar3"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_menu" />
+        
+        <ImageView
+            android:id="@+id/bar3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:maxWidth="1dp"
+            android:layout_toLeftOf="@+id/button_swype_right"
+            android:src="@android:drawable/status_bar_item_app_background" />
+        
+        <ImageButton
             android:id="@+id/button_swype_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
-            android:background="@drawable/arrow_right_button"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_swipe_right"
             android:text="" />
+
+
+
+
         
     </RelativeLayout>
     

@@ -21,9 +21,11 @@
 
 package it.redturtle.mobile.apparpav;
 
+import net.londatiga.android.ActionItem;
+import net.londatiga.android.QuickAction;
+import net.londatiga.android.R;
 import it.redturtle.mobile.apparpav.types.Forecast;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -36,13 +38,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
 /**
  * @author Nicola Senno
  */
 public final class ForecastFragment extends Fragment {
-
+	private static final int ID_FAVORITIES = 1;
+	private static final int ID_UPDATE = 2;
 	private Activity activity;
 	public static String currentBulletinid;
 	private Forecast forecast;
@@ -111,9 +114,46 @@ public final class ForecastFragment extends Fragment {
 				}
 		}
 		
-		//###########################
+	    //################################################
+		ActionItem favoritesItem 	= new ActionItem(ID_FAVORITIES, "Preferiti",  getResources().getDrawable(R.drawable.ic_menu_star));
+        ActionItem updateItem 	= new ActionItem(ID_UPDATE, "Aggiorna", getResources().getDrawable(R.drawable.ic_menu_refresh));
+               
+		final QuickAction mQuickAction 	= new QuickAction( getActivity());
+		
+		mQuickAction.addActionItem(favoritesItem);
+		mQuickAction.addActionItem(updateItem);
+		
+		//setup the action item click listener
+		mQuickAction.setOnActionItemClickListener(new QuickAction.OnActionItemClickListener() {
+			@Override
+			public void onItemClick(QuickAction quickAction, int pos, int actionId) {
+				ActionItem actionItem = quickAction.getActionItem(pos);
+				
+				if (actionId == ID_FAVORITIES) {
+					Intent newintent = new Intent( getActivity().getBaseContext(), ConfActivity.class);
+					newintent.putExtra("reload", true);
+					startActivity(newintent);
+				} else {
+					Intent newintent = new Intent( getActivity().getBaseContext(), MeteogramsActivity.class);
+					newintent.putExtra("reload", true);
+					startActivity(newintent);
+				}
+			}
+		});
+		
+		
+		ImageButton buttonMenu = (ImageButton) view.findViewById(R.id.button_menu);
+	    buttonMenu.setOnClickListener(new View.OnClickListener() {
+		       @Override
+		       public void onClick(View v) {
+					mQuickAction.show(v);
+		       }
+		    });
+		
+	    //################################################	
+
 		// set listener for the button_swype_left and button_swype_right
-	    Button bsl = (Button) view.findViewById(R.id.button_swype_left);
+		ImageButton bsl = (ImageButton) view.findViewById(R.id.button_swype_left);
 	    bsl.setOnClickListener(new View.OnClickListener() {
 	       @Override
 	       public void onClick(View v) {
@@ -121,7 +161,7 @@ public final class ForecastFragment extends Fragment {
 	       }
 	    });
 
-		Button bsr = (Button) view.findViewById(R.id.button_swype_right);
+	    ImageButton bsr = (ImageButton) view.findViewById(R.id.button_swype_right);
 	    bsr.setOnClickListener(new View.OnClickListener() {
 		       @Override
 		       public void onClick(View v) {

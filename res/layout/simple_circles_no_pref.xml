@@ -63,7 +63,6 @@
         <TextView
             android:id="@+id/advice"
             android:layout_width="300dp"
-            
             android:layout_height="fill_parent"
             android:layout_marginTop="50dp"
             android:layout_gravity="center"
@@ -79,7 +78,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="@string/config" />
+            android:text="@string/config"
+            android:drawableLeft="@drawable/ic_menu_star" />
 
     </LinearLayout>
 
